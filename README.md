@@ -20,7 +20,10 @@
 
 Backend : 
 
-- `docker compose up -d`
+```
+$ docker compose run backend-next sh -c "yarn install"
+$ docker compose up -d
+```
 
 Frontend :
 
