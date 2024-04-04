@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "20f1461f-f923-4db5-a19b-a4a8f3d8c4a6",
+		"name": "Assignment Book Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10042350"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"riochandra@mail.com\",\n    \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/auth/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Rio Chandra\",\n    \"email\": \"riochandra@mail.com\",\n    \"password\": \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/auth/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_api}}/book/list?lastId=cluju3gah002iv2efmqf8vo0t&limit=5",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"book",
+						"list"
+					],
+					"query": [
+						{
+							"key": "lastId",
+							"value": "cluju3gah002iv2efmqf8vo0t"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Detail Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_api}}/book/detail/cluju3gah002iv2efmqf8vo0t",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"book",
+						"detail",
+						"cluju3gah002iv2efmqf8vo0t"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_api}}/order/list",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"order",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user Point",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url_api}}/order/point",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"order",
+						"point"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookId\": \"cluju3gah002hv2ef9h2v2noh\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url_api}}/order/",
+					"host": [
+						"{{url_api}}"
+					],
+					"path": [
+						"order",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcGkiLCJzdWIiOiJjbHVqc2trZ2YwMDAweDg5dTBwYWl3cmxqIiwiaWF0IjoxNzEyMTUyMTY0NTk1LCJleHAiOjE3MTIyMzg1NjQ1OTV9.gySIY5QBdVhqIGa4GGXpxj-H5FReH62LAQq5xVgU81s",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:6235",
+			"type": "string"
+		},
+		{
+			"key": "url_api",
+			"value": "{{url}}/api/v1",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
