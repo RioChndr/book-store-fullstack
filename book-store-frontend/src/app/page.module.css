@@ -1,0 +1,11 @@
+.beams {
+    /* background-image: url('../img/beams/hero@75.jpg'); */
+    /* background-color: '#0c1221'; */
+    background-size: 150rem;
+}
+
+:global(.dark) .beams {
+    /* background-image: url('../img/beams/hero-dark@90.jpg'); */
+    /* background-color: '#0c1221'; */
+    background-size: 86.125rem;
+}
